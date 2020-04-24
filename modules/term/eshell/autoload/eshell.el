@@ -109,9 +109,9 @@
         (doom-mark-buffer-as-real-h)
         (if (eq major-mode 'eshell-mode)
             (run-hooks 'eshell-mode-hook)
-          (eshell-mode))
-        (when command
-          (+eshell-run-command command eshell-buffer))))))
+          (eshell-mode))))
+    (when command
+      (+eshell-run-command command eshell-buffer))))
 
 ;;;###autoload
 (defun +eshell/here (&optional command)
